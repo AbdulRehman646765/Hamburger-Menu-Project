@@ -5,3 +5,9 @@ hamburger.addEventListener("click", () => {
 
   hamburger.classList.toggle("active");
 });
+
+const date = new Date('2024-07-25').toDateString()
+// date.setFullYear(2024, 06, 25)
+// console.log(date);
+const dateInHtml = document.querySelector(".date").innerText = date;
+

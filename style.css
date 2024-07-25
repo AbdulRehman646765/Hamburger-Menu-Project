@@ -16,6 +16,7 @@ header {
   height: 121px;
   background-color: white;
   box-shadow: 0 0 9px 5px #00000036;
+  border-bottom: 2px solid #fe8331;
 }
 .main-logo {
   display: flex;
@@ -28,12 +29,12 @@ header {
   cursor: pointer;
 }
 .main-logo .design-text {
-  animation: animate 5s ease-in-out infinite;
-  transform: translateX(-50px);
+  animation: animate 6s ease-in-out infinite;
+  transform: translateX(-70px);
 }
 @keyframes animate {
   100% {
-    transform: translateX(50px);
+    transform: translateX(70px);
   }
 }
 .nav-bar ul {
@@ -103,7 +104,6 @@ header {
 .banner img {
   margin: 115px 75px 0 75px;
   width: 90%;
-  /* box-shadow: 0 0 10px rgb(81, 81, 81), 0 0 20px rgb(87, 87, 87); */
 }
 .banner-paragraph {
   font-size: 24px;
@@ -158,12 +158,23 @@ header {
   color: #492118;
   font-weight: 700;
 }
+.date{
+  color: #492118;
+  background-color: #858585;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  box-shadow: 0 0 9px 5px #00000036;
+  border-top: 2px solid #0000004d;
+}
 /**************************** Media Query *************************************/
 @media (max-width: 768px) {
   header {
     background-color: transparent;
     box-shadow: 0 0;
     justify-content: space-between;
+    border: none;
   }
   .main-logo {
     margin-top: 100px;
