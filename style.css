@@ -10,22 +10,35 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 121px;
   background-color: white;
   box-shadow: 0 0 9px 5px #00000036;
 }
-.logo {
-  width: 61px;
-  height: 70.72px;
-  margin-left: 45px;
+.main-logo {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 4px;
+}
+.main-logo .logo {
+  width: 65px;
   cursor: pointer;
+}
+.main-logo .design-text {
+  animation: animate 5s ease-in-out infinite;
+  transform: translateX(-50px);
+}
+@keyframes animate {
+  100% {
+    transform: translateX(50px);
+  }
 }
 .nav-bar ul {
   list-style-type: none;
-  margin-right: 55px;
+  margin-left: 35px;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -150,13 +163,34 @@ header {
   header {
     background-color: transparent;
     box-shadow: 0 0;
+    justify-content: space-between;
   }
-  .logo {
+  .main-logo {
+    margin-top: 100px;
+    overflow: visible;
+    margin-left: 35px;
+  }
+  .main-logo .logo {
+    margin-top: -70px;
     width: 75px;
     height: 90px;
   }
-  .main-log {
-    margin-top: 60px;
+  .main-logo :nth-child(1) {
+    margin-bottom: 4px;
+  }
+  .main-logo :nth-child(3) {
+    margin-bottom: -2px;
+  }
+  .main-logo .design-text {
+    animation: animate 3s ease-out infinite;
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  @keyframes animate {
+    100% {
+      transform: translateY(0px) rotate(360deg);
+      opacity: 1;
+    }
   }
   .hamburger-container {
     display: block;
@@ -178,7 +212,7 @@ header {
     background-color: rgba(255, 255, 255, 0.9);
     width: 280px;
     height: 295px;
-    padding: 40px 30px;
+    padding: 40px 0px;
   }
   .nav-bar ul {
     flex-direction: column;
